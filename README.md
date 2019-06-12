@@ -17,7 +17,7 @@ Please refer to the Udacity instructions for setting up a GPU instance for this 
 - Python 3
 - NumPy
 - TensorFlow 1.x
-- Keras 2.x
+- Keras 2.1.x
 
 # Submission
 When you are ready to submit your project, do the following steps:
