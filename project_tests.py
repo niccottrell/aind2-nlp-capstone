@@ -9,6 +9,12 @@ def _test_model(model, input_shape, output_sequence_length, french_vocab_size):
     if isinstance(model, Sequential):
         model = model.model
 
+    assert hasattr(model, 'input_shape'),\
+        'Missing input shape attribute on model.'
+
+    assert model.input_shape == (None, *input_shape[1:]),\
+        'Wrong input shape. Found input shape {} using parameter input_shape={}'.format(model.input_shape, input_shape)
+
     assert model.input_shape == (None, *input_shape[1:]),\
         'Wrong input shape. Found input shape {} using parameter input_shape={}'.format(model.input_shape, input_shape)
 
